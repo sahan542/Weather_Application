@@ -2,6 +2,8 @@ import './App.css';
 import CurrentWeather from './components/current-weather/current-weather';
 import { WEATHER_API_URL,WEATHER_API_KEY} from './components/api';
 import { useState } from 'react';
+import Search from './components/search/search';
+import Forecast from './components/forecast/forecast';
 
 function App() {
 
@@ -30,7 +32,8 @@ function App() {
 
   return (
     <div className="container">
-      {currentWeather && <CurrentWeather data={CurrentWeather}/>}
+
+      {forecast && <Forecast data={forecast}/>}
     </div>
   );
 }
